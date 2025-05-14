@@ -1,6 +1,6 @@
 {
   "name": "bv-pqb",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "@types/lodash": "^4.17.16",
-    "bv-pqb": "^0.0.3",
+    "bv-pqb": "^0.0.4",
     "lodash": "^4.17.21",
     "query-string": "^9.1.2"
   }

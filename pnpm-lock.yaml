@@ -12,8 +12,8 @@ importers:
         specifier: ^4.17.16
         version: 4.17.16
       bv-pqb:
-        specifier: ^0.0.3
-        version: 0.0.3(typescript@5.8.3)
+        specifier: ^0.0.4
+        version: 0.0.4(typescript@5.8.3)
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
@@ -152,13 +152,20 @@ packages:
     peerDependencies:
       typescript: ^5.8.3
 
+  bv-pqb@0.0.4:
+    resolution: {integrity: sha512-iTPQ9hzWMhraTwMKfemzhwn+O4TzCRqQWqKozRyN+Be4DC6R9bpf2h8W0FwxSfB70Pr5fCxw7C4KyiR/YbtK4Q==}
+    peerDependencies:
+      typescript: ^5.8.3
+
   bv-prisma-query-builder@0.0.1:
     resolution: {integrity: sha512-vVGqSJY7j9TcQo/vSWaolVabLr5XZuHwDpo24szcI1CM/M80u9XqLsU14EDphnYPO9RcX3q36K55kOCAitZMDw==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       typescript: ^5.8.3
 
   bv-prisma-query-builder@0.0.2:
     resolution: {integrity: sha512-n2yrwWDZS6vamj+g4H1P61+pqX46z2ZrplRRfFVu98UTVXm0HR1l0r9o0Vrq36o0Tj429GOakaunWBY1eAw0gg==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       typescript: ^5.8.3
 
@@ -591,6 +598,14 @@ snapshots:
     dependencies:
       '@types/lodash': 4.17.16
       bv-prisma-query-builder: 0.0.2(typescript@5.8.3)
+      lodash: 4.17.21
+      query-string: 9.1.2
+      typescript: 5.8.3
+
+  bv-pqb@0.0.4(typescript@5.8.3):
+    dependencies:
+      '@types/lodash': 4.17.16
+      bv-pqb: 0.0.3(typescript@5.8.3)
       lodash: 4.17.21
       query-string: 9.1.2
       typescript: 5.8.3
