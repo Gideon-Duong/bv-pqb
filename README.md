@@ -6,13 +6,13 @@ A TypeScript-based query builder utility for Prisma that helps you build complex
 
 ```bash
 # Using npm
-npm install pqb
+npm install bv-pqb
 
 # Using yarn
-yarn add pqb
+yarn add bv-pqb
 
 # Using pnpm
-pnpm add pqb
+pnpm add bv-pqb
 ```
 
 ## Features
