@@ -1,0 +1,20 @@
+{
+  "name": "bv-prisma-query-builder",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "bun ./tests/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.17.16",
+    "lodash": "^4.17.21",
+    "query-string": "^9.1.2"
+  }
+}
