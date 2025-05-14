@@ -1,9 +1,9 @@
 import queryString from 'query-string';
 import { QueryBuilder } from '../src'
 
-const search = '?page=3&take=12&sort=createAt,contacts.id';
+const search = '?select=userId,id,board,contacts,contacts.take(3),contacts.select(id,event.id,event.name)';
 const parsed = queryString.parse(search);
-console.log('parsed', parsed);
+console.log('parsed', JSON.stringify(parsed, null, 2));
 
 const builder = new QueryBuilder();
 const prismaQuery = builder.build(parsed);

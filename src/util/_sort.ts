@@ -1,9 +1,9 @@
 import _ from 'lodash';
-import type { Sort } from '../types';
+import type { Object, Sort } from '../types';
 import { _nestedDotNotation } from '../common';
 
-export const _sort = (q: Record<string, any>): Array<Sort> | undefined => {
-  let sort = _.get(q, 'sort');
+export const _sort = (query: Object): Array<Sort> | undefined => {
+  let sort = _.get(query, 'sort');
   if (!sort) return;
 
   sort = sort.split(',') || [];
