@@ -1,15 +1,24 @@
-# bv-prisma-query-builder
+# BV Prisma Query Builder
 
-To install dependencies:
+A TypeScript-based query builder utility for Prisma that helps you build complex queries in a type-safe and intuitive way.
 
-```bash
-bun install
-```
-
-To run:
+## Installation
 
 ```bash
-bun run index.ts
+# Using npm
+npm install bv-prisma-query-builder
+
+# Using yarn
+yarn add bv-prisma-query-builder
+
+# Using pnpm
+pnpm add bv-prisma-query-builder
 ```
 
-This project was created using `bun init` in bun v1.2.9. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+## Features
+
+- 🔍 Advanced query filtering
+- 📊 Sorting capabilities
+- 📄 Pagination support
+- 🛡️ Type-safe query building
+- 🔧 Lodash integration for advanced operations
