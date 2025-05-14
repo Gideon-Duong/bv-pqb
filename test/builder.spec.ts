@@ -1,6 +1,7 @@
 import queryString from 'query-string';
 import { expect } from 'chai';
-import { QueryBuilder } from '../src'
+import { QueryBuilder } from '../src';
+// import { QueryBuilder } from 'bv-prisma-query-builder';
 
 describe('Prisma Query Builder', () => {
   /** Pagination */

@@ -1,7 +1,13 @@
 {
   "name": "bv-prisma-query-builder",
-  "module": "index.ts",
-  "private": true,
+  "version": "0.0.2",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "private": false,
   "scripts": {
     "build": "tsc",
     "test": "mocha"
@@ -21,6 +27,7 @@
   },
   "dependencies": {
     "@types/lodash": "^4.17.16",
+    "bv-prisma-query-builder": "^0.0.2",
     "lodash": "^4.17.21",
     "query-string": "^9.1.2"
   }

@@ -11,6 +11,9 @@ importers:
       '@types/lodash':
         specifier: ^4.17.16
         version: 4.17.16
+      bv-prisma-query-builder:
+        specifier: ^0.0.2
+        version: 0.0.2(typescript@5.8.3)
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
@@ -143,6 +146,16 @@ packages:
 
   bun-types@1.2.13:
     resolution: {integrity: sha512-rRjA1T6n7wto4gxhAO/ErZEtOXyEZEmnIHQfl0Dt1QQSB4QV0iP6BZ9/YB5fZaHFQ2dwHFrmPaRQ9GGMX01k9Q==}
+
+  bv-prisma-query-builder@0.0.1:
+    resolution: {integrity: sha512-vVGqSJY7j9TcQo/vSWaolVabLr5XZuHwDpo24szcI1CM/M80u9XqLsU14EDphnYPO9RcX3q36K55kOCAitZMDw==}
+    peerDependencies:
+      typescript: ^5.8.3
+
+  bv-prisma-query-builder@0.0.2:
+    resolution: {integrity: sha512-n2yrwWDZS6vamj+g4H1P61+pqX46z2ZrplRRfFVu98UTVXm0HR1l0r9o0Vrq36o0Tj429GOakaunWBY1eAw0gg==}
+    peerDependencies:
+      typescript: ^5.8.3
 
   camelcase@6.3.0:
     resolution: {integrity: sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==}
@@ -568,6 +581,21 @@ snapshots:
   bun-types@1.2.13:
     dependencies:
       '@types/node': 22.15.18
+
+  bv-prisma-query-builder@0.0.1(typescript@5.8.3):
+    dependencies:
+      '@types/lodash': 4.17.16
+      lodash: 4.17.21
+      query-string: 9.1.2
+      typescript: 5.8.3
+
+  bv-prisma-query-builder@0.0.2(typescript@5.8.3):
+    dependencies:
+      '@types/lodash': 4.17.16
+      bv-prisma-query-builder: 0.0.1(typescript@5.8.3)
+      lodash: 4.17.21
+      query-string: 9.1.2
+      typescript: 5.8.3
 
   camelcase@6.3.0: {}
 
