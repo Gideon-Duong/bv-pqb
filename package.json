@@ -1,12 +1,21 @@
 {
-  "name": "bv-prisma-query-builder",
-  "version": "0.0.2",
+  "name": "bv-pqb",
+  "version": "0.0.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
     "README.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gideon-Duong/bv-pqb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gideon-Duong/bv-pqb/issues"
+  },
+  "homepage": "https://github.com/Gideon-Duong/bv-pqb#readme",
+  "demo": "https://github.com/Gideon-Duong/bv-pqb",
   "private": false,
   "scripts": {
     "build": "tsc",
@@ -27,7 +36,7 @@
   },
   "dependencies": {
     "@types/lodash": "^4.17.16",
-    "bv-prisma-query-builder": "^0.0.2",
+    "bv-pqb": "^0.0.3",
     "lodash": "^4.17.21",
     "query-string": "^9.1.2"
   }

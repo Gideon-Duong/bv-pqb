@@ -1,4 +1,4 @@
-# BV Prisma Query Builder
+# Prisma Query Builder
 
 A TypeScript-based query builder utility for Prisma that helps you build complex queries in a type-safe and intuitive way.
 
@@ -6,13 +6,13 @@ A TypeScript-based query builder utility for Prisma that helps you build complex
 
 ```bash
 # Using npm
-npm install bv-prisma-query-builder
+npm install pqb
 
 # Using yarn
-yarn add bv-prisma-query-builder
+yarn add pqb
 
 # Using pnpm
-pnpm add bv-prisma-query-builder
+pnpm add pqb
 ```
 
 ## Features
