@@ -1,35 +1,24 @@
-'use client'
-import { useState } from "react"
-import { Input } from "@/components/ui/input";
+'use client';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Loader2 } from 'lucide-react';
+import qs from 'qs';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import ReactJson from 'react-json-view';
+import { z } from 'zod';
+
+import CollectionDefine from '@/components/shared/collection-define';
+import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Form, FormControl, FormField, FormItem, FormLabel } from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button"
-import { z } from "zod"
-import ReactJson from 'react-json-view'
-import { zodResolver } from "@hookform/resolvers/zod"
-import qs from 'qs';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-} from "@/components/ui/form"
-import { useForm } from "react-hook-form";
-import { Loader2 } from "lucide-react";
-import CollectionDefine from "@/components/shared/collection-define";
+} from '@/components/ui/select';
 
 const COLLECTION = [
   {
@@ -56,17 +45,17 @@ const COLLECTION = [
     label: 'PostCategory',
     value: 'postCategory',
   },
-]
-
+];
 
 const schema = z.object({
   collection: z.string().nonempty('Collection is required'),
   query: z.string().nonempty('Query is required'),
-})
+});
 
 export default function Home() {
-  const [data, setData] = useState<Record<string, any> | null>(null)
-  const [isLoading, setIsLoading] = useState<boolean>(false)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [data, setData] = useState<Record<string, any> | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const form = useForm<z.infer<typeof schema>>({
     resolver: zodResolver(schema),
@@ -74,12 +63,12 @@ export default function Home() {
       collection: 'user',
       query: '',
     },
-  })
+  });
 
   const onSubmit = async (values: z.infer<typeof schema>) => {
     try {
-      setIsLoading(true)
-      const parse = qs.parse(values.query)
+      setIsLoading(true);
+      const parse = qs.parse(values.query);
       const res = await fetch('/api/builder', {
         method: 'POST',
         headers: {
@@ -89,40 +78,47 @@ export default function Home() {
           collection: values.collection,
           query: parse,
         }),
-      })
-      const data = await res.json()
-      setData(data)
-      setIsLoading(false)
+      });
+      const data = await res.json();
+      setData(data);
+      setIsLoading(false);
     } catch {
-      setIsLoading(false)
-      setData(null)
+      setIsLoading(false);
+      setData(null);
     }
-  }
+  };
 
   return (
     <Dialog>
       <div className='flex flex-col gap-4 p-4'>
-        <h1 className="text-2xl font-bold">Prisma Query Builder</h1>
-        <p className="text-gray-600">
-          This app lets you create queries for your database models.
-          Select a collection and enter your query to get results.
-          You can view the available collections <DialogTrigger><p className='text-[22px] italic font-bold underline text-blue-500 cursor-pointer'>here.</p></DialogTrigger>
+        <h1 className='text-2xl font-bold'>Prisma Query Builder</h1>
+        <p className='text-gray-600'>
+          This app lets you create queries for your database models. Select a collection and enter
+          your query to get results. You can view the available collections{' '}
+          <DialogTrigger>
+            <p className='cursor-pointer text-[22px] font-bold text-blue-500 italic underline'>
+              here.
+            </p>
+          </DialogTrigger>
         </p>
 
         <div>
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-4 items-center">
-              <div className="flex justify-center items-center gap-2">
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className='flex flex-col items-center gap-4'
+            >
+              <div className='flex items-center justify-center gap-2'>
                 <FormField
                   control={form.control}
-                  name="collection"
+                  name='collection'
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Collection</FormLabel>
                       <FormControl>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
-                          <SelectTrigger className="w-[180px]">
-                            <SelectValue placeholder="Select a collection..." />
+                          <SelectTrigger className='w-[180px]'>
+                            <SelectValue placeholder='Select a collection...' />
                           </SelectTrigger>
                           <SelectContent>
                             {COLLECTION.map((item) => (
@@ -139,31 +135,34 @@ export default function Home() {
                 />
                 <FormField
                   control={form.control}
-                  name="query"
+                  name='query'
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Query</FormLabel>
                       <FormControl>
-                        <Input className="w-[1024px]" placeholder="Enter your search query..." {...field} />
+                        <Input
+                          className='w-[1024px]'
+                          placeholder='Enter your search query...'
+                          {...field}
+                        />
                       </FormControl>
                       {/* <FormMessage /> */}
                     </FormItem>
                   )}
                 />
-
               </div>
-              <Button type="submit" className="w-[100px] cursor-pointer" disabled={isLoading}>
+              <Button type='submit' className='w-[100px] cursor-pointer' disabled={isLoading}>
                 {isLoading && (
-                  <Loader2 className="absolute left-1/2 top-1/2 h-4 w-4 animate-spin -translate-x-1/2 -translate-y-1/2" />
+                  <Loader2 className='absolute top-1/2 left-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 animate-spin' />
                 )}
-                {isLoading ? "In progress...." : "Send"}
+                {isLoading ? 'In progress....' : 'Send'}
               </Button>
             </form>
           </Form>
         </div>
-        <div className='flex gap-2 items-stretch'>
+        <div className='flex items-stretch gap-2'>
           <div
-            className='flex-1 p-2 flex flex-col'
+            className='flex flex-1 flex-col p-2'
             style={{
               borderStyle: 'double',
               borderWidth: '3px',
@@ -176,7 +175,7 @@ export default function Home() {
             </div>
           </div>
           <div
-            className='flex-1 p-2 flex flex-col'
+            className='flex flex-1 flex-col p-2'
             style={{
               borderStyle: 'double',
               borderWidth: '3px',
@@ -190,7 +189,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <DialogContent className="max-h-[90vh] overflow-y-auto scrollbar-hidden">
+      <DialogContent className='scrollbar-hidden max-h-[90vh] overflow-y-auto'>
         <CollectionDefine />
       </DialogContent>
     </Dialog>
