@@ -1,10 +1,10 @@
 'use client';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
+import dynamic from 'next/dynamic';
 import qs from 'qs';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import ReactJson from 'react-json-view';
 import { z } from 'zod';
 
 import CollectionDefine from '@/components/shared/collection-define';
@@ -19,6 +19,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+
+const ReactJson = dynamic(() => import('react-json-view'), { ssr: false });
 
 const COLLECTION = [
   {
