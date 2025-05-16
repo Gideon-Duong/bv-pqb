@@ -10,6 +10,9 @@ export async function POST(request: Request) {
     ...(builder?.orderBy && {
       orderBy: builder.orderBy,
     }),
+    ...(builder?.where && {
+      where: builder.where,
+    }),
     skip: builder.skip,
     take: builder.take,
   });

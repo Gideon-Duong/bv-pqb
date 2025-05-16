@@ -27,8 +27,8 @@ importers:
         specifier: ^1.2.2
         version: 1.2.2(@types/react@19.1.4)(react@19.1.0)
       bv-pqb:
-        specifier: ^0.0.4
-        version: 0.0.4(typescript@5.8.3)
+        specifier: ^0.0.5
+        version: 0.0.5(typescript@5.8.3)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -1297,6 +1297,11 @@ packages:
 
   bv-pqb@0.0.4:
     resolution: {integrity: sha512-iTPQ9hzWMhraTwMKfemzhwn+O4TzCRqQWqKozRyN+Be4DC6R9bpf2h8W0FwxSfB70Pr5fCxw7C4KyiR/YbtK4Q==}
+    peerDependencies:
+      typescript: ^5.8.3
+
+  bv-pqb@0.0.5:
+    resolution: {integrity: sha512-CIPyWTlz1SoMC0Mme7IYgoddMFOhVOr6Gxz+BUTz0cjjRPFir6baazze/oztjj3EnX7nLPnuHCa9HkjE4ifXKQ==}
     peerDependencies:
       typescript: ^5.8.3
 
@@ -3964,6 +3969,14 @@ snapshots:
     dependencies:
       '@types/lodash': 4.17.16
       bv-pqb: 0.0.3(typescript@5.8.3)
+      lodash: 4.17.21
+      query-string: 9.1.2
+      typescript: 5.8.3
+
+  bv-pqb@0.0.5(typescript@5.8.3):
+    dependencies:
+      '@types/lodash': 4.17.16
+      bv-pqb: 0.0.4(typescript@5.8.3)
       lodash: 4.17.21
       query-string: 9.1.2
       typescript: 5.8.3
