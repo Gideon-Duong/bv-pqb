@@ -1,6 +1,6 @@
-import { QueryBuilder } from "bv-pqb";
+import { QueryBuilder } from 'bv-pqb';
 
-import { prisma } from "@/lib/prisma";
+import { prisma } from '@/lib/prisma';
 
 export async function POST(request: Request) {
   const body = await request.json();
