@@ -11,15 +11,12 @@ importers:
       '@types/lodash':
         specifier: ^4.17.16
         version: 4.17.16
-      bv-pqb:
-        specifier: ^0.0.4
-        version: 0.0.4(typescript@5.8.3)
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
       query-string:
-        specifier: ^9.1.2
-        version: 9.1.2
+        specifier: ^6.14.1
+        version: 6.14.1
     devDependencies:
       '@types/bun':
         specifier: latest
@@ -147,28 +144,6 @@ packages:
   bun-types@1.2.13:
     resolution: {integrity: sha512-rRjA1T6n7wto4gxhAO/ErZEtOXyEZEmnIHQfl0Dt1QQSB4QV0iP6BZ9/YB5fZaHFQ2dwHFrmPaRQ9GGMX01k9Q==}
 
-  bv-pqb@0.0.3:
-    resolution: {integrity: sha512-kPJg7E5pYNQgcrUy6IMnjibeLLhZO2v1yMpW3RiBGP/WO4WnxCwaVw26MqdQN/MAQWRpbxwg1lhyzdaJk+hfCg==}
-    peerDependencies:
-      typescript: ^5.8.3
-
-  bv-pqb@0.0.4:
-    resolution: {integrity: sha512-iTPQ9hzWMhraTwMKfemzhwn+O4TzCRqQWqKozRyN+Be4DC6R9bpf2h8W0FwxSfB70Pr5fCxw7C4KyiR/YbtK4Q==}
-    peerDependencies:
-      typescript: ^5.8.3
-
-  bv-prisma-query-builder@0.0.1:
-    resolution: {integrity: sha512-vVGqSJY7j9TcQo/vSWaolVabLr5XZuHwDpo24szcI1CM/M80u9XqLsU14EDphnYPO9RcX3q36K55kOCAitZMDw==}
-    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
-    peerDependencies:
-      typescript: ^5.8.3
-
-  bv-prisma-query-builder@0.0.2:
-    resolution: {integrity: sha512-n2yrwWDZS6vamj+g4H1P61+pqX46z2ZrplRRfFVu98UTVXm0HR1l0r9o0Vrq36o0Tj429GOakaunWBY1eAw0gg==}
-    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
-    peerDependencies:
-      typescript: ^5.8.3
-
   camelcase@6.3.0:
     resolution: {integrity: sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==}
     engines: {node: '>=10'}
@@ -220,9 +195,9 @@ packages:
     resolution: {integrity: sha512-9iE1PgSik9HeIIw2JO94IidnE3eBoQrFJ3w7sFuzSX4DpmZ3v5sZpUiV5Swcf6mQEF+Y0ru8Neo+p+nyh2J+hQ==}
     engines: {node: '>=10'}
 
-  decode-uri-component@0.4.1:
-    resolution: {integrity: sha512-+8VxcR21HhTy8nOt6jf20w0c9CADrw1O8d+VZ/YzzCt4bJ3uBjw+D1q2osAB8RnpwwaeYBxy0HyKQxD5JBMuuQ==}
-    engines: {node: '>=14.16'}
+  decode-uri-component@0.2.2:
+    resolution: {integrity: sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==}
+    engines: {node: '>=0.10'}
 
   deep-eql@5.0.2:
     resolution: {integrity: sha512-h5k/5U50IJJFpzfL6nO9jaaumfjO/f2NjK/oYB2Djzm4p9L+3T9qWpZqZ2hAbLPuuYq9wrU08WQyBTL5GbPk5Q==}
@@ -253,9 +228,9 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  filter-obj@5.1.0:
-    resolution: {integrity: sha512-qWeTREPoT7I0bifpPUXtxkZJ1XJzxWtfoWWkdVGqa+eCr3SHW/Ocp89o8vLvbUuQnadybJpjOKu4V+RwO6sGng==}
-    engines: {node: '>=14.16'}
+  filter-obj@1.1.0:
+    resolution: {integrity: sha512-8rXg1ZnX7xzy2NGDVkBVaAy+lSlPNwad13BtgSlLuxfIslyt5Vg64U7tFcCt4WS1R0hvtnQybT/IyCkGZ3DpXQ==}
+    engines: {node: '>=0.10.0'}
 
   find-up@5.0.0:
     resolution: {integrity: sha512-78/PXT1wlLLDgTzDs7sjq9hzz0vXD+zn+7wypEe4fXQxCmdmqfGsEPQxmiCSQI3ajFV91bVSsvNtrJRiW6nGng==}
@@ -377,9 +352,9 @@ packages:
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
-  query-string@9.1.2:
-    resolution: {integrity: sha512-s3UlTyjxRux4KjwWaJsjh1Mp8zoCkSGKirbD9H89pEM9UOZsfpRZpdfzvsy2/mGlLfC3NnYVpy2gk7jXITHEtA==}
-    engines: {node: '>=18'}
+  query-string@6.14.1:
+    resolution: {integrity: sha512-XDxAeVmpfu1/6IjyT/gXHOl+S0vQ9owggJ30hhWKdHAsNPOcasn5o9BW0eejZqL2e4vMjhAxoW3jVHcD6mbcYw==}
+    engines: {node: '>=6'}
 
   randombytes@2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
@@ -410,9 +385,13 @@ packages:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
 
-  split-on-first@3.0.0:
-    resolution: {integrity: sha512-qxQJTx2ryR0Dw0ITYyekNQWpz6f8dGd7vffGNflQQ3Iqj9NJ6qiZ7ELpZsJ/QBhIVAiDfXdag3+Gp8RvWa62AA==}
-    engines: {node: '>=12'}
+  split-on-first@1.1.0:
+    resolution: {integrity: sha512-43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw==}
+    engines: {node: '>=6'}
+
+  strict-uri-encode@2.0.0:
+    resolution: {integrity: sha512-QwiXZgpRcKkhTj2Scnn++4PKtWsH0kpzZ62L2R6c/LUVYv7hVnZqcg2+sMuT6R7Jusu1vviK/MFsu6kNJfWlEQ==}
+    engines: {node: '>=4'}
 
   string-width@4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
@@ -594,37 +573,6 @@ snapshots:
     dependencies:
       '@types/node': 22.15.18
 
-  bv-pqb@0.0.3(typescript@5.8.3):
-    dependencies:
-      '@types/lodash': 4.17.16
-      bv-prisma-query-builder: 0.0.2(typescript@5.8.3)
-      lodash: 4.17.21
-      query-string: 9.1.2
-      typescript: 5.8.3
-
-  bv-pqb@0.0.4(typescript@5.8.3):
-    dependencies:
-      '@types/lodash': 4.17.16
-      bv-pqb: 0.0.3(typescript@5.8.3)
-      lodash: 4.17.21
-      query-string: 9.1.2
-      typescript: 5.8.3
-
-  bv-prisma-query-builder@0.0.1(typescript@5.8.3):
-    dependencies:
-      '@types/lodash': 4.17.16
-      lodash: 4.17.21
-      query-string: 9.1.2
-      typescript: 5.8.3
-
-  bv-prisma-query-builder@0.0.2(typescript@5.8.3):
-    dependencies:
-      '@types/lodash': 4.17.16
-      bv-prisma-query-builder: 0.0.1(typescript@5.8.3)
-      lodash: 4.17.21
-      query-string: 9.1.2
-      typescript: 5.8.3
-
   camelcase@6.3.0: {}
 
   chai@5.2.0:
@@ -674,7 +622,7 @@ snapshots:
 
   decamelize@4.0.0: {}
 
-  decode-uri-component@0.4.1: {}
+  decode-uri-component@0.2.2: {}
 
   deep-eql@5.0.2: {}
 
@@ -692,7 +640,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  filter-obj@5.1.0: {}
+  filter-obj@1.1.0: {}
 
   find-up@5.0.0:
     dependencies:
@@ -814,11 +762,12 @@ snapshots:
 
   picocolors@1.1.1: {}
 
-  query-string@9.1.2:
+  query-string@6.14.1:
     dependencies:
-      decode-uri-component: 0.4.1
-      filter-obj: 5.1.0
-      split-on-first: 3.0.0
+      decode-uri-component: 0.2.2
+      filter-obj: 1.1.0
+      split-on-first: 1.1.0
+      strict-uri-encode: 2.0.0
 
   randombytes@2.1.0:
     dependencies:
@@ -842,7 +791,9 @@ snapshots:
 
   signal-exit@4.1.0: {}
 
-  split-on-first@3.0.0: {}
+  split-on-first@1.1.0: {}
+
+  strict-uri-encode@2.0.0: {}
 
   string-width@4.2.3:
     dependencies:
