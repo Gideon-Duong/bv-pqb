@@ -27,8 +27,8 @@ importers:
         specifier: ^1.2.2
         version: 1.2.2(@types/react@19.1.4)(react@19.1.0)
       bv-pqb:
-        specifier: ^0.0.7
-        version: 0.0.7(typescript@5.8.3)
+        specifier: ^0.0.9
+        version: 0.0.9(typescript@5.8.3)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -1290,30 +1290,8 @@ packages:
     resolution: {integrity: sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==}
     engines: {node: '>=10.16.0'}
 
-  bv-pqb@0.0.3:
-    resolution: {integrity: sha512-kPJg7E5pYNQgcrUy6IMnjibeLLhZO2v1yMpW3RiBGP/WO4WnxCwaVw26MqdQN/MAQWRpbxwg1lhyzdaJk+hfCg==}
-    peerDependencies:
-      typescript: ^5.8.3
-
-  bv-pqb@0.0.4:
-    resolution: {integrity: sha512-iTPQ9hzWMhraTwMKfemzhwn+O4TzCRqQWqKozRyN+Be4DC6R9bpf2h8W0FwxSfB70Pr5fCxw7C4KyiR/YbtK4Q==}
-    peerDependencies:
-      typescript: ^5.8.3
-
-  bv-pqb@0.0.7:
-    resolution: {integrity: sha512-eazaE+Y9FqBQW/D+aQdzdG16gxiyi/QWEpns//FlQYeXSxdhnW9+6Ens2KpaNar+qEmE++DWzxx5CTm1o+FDRA==}
-    peerDependencies:
-      typescript: ^5.8.3
-
-  bv-prisma-query-builder@0.0.1:
-    resolution: {integrity: sha512-vVGqSJY7j9TcQo/vSWaolVabLr5XZuHwDpo24szcI1CM/M80u9XqLsU14EDphnYPO9RcX3q36K55kOCAitZMDw==}
-    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
-    peerDependencies:
-      typescript: ^5.8.3
-
-  bv-prisma-query-builder@0.0.2:
-    resolution: {integrity: sha512-n2yrwWDZS6vamj+g4H1P61+pqX46z2ZrplRRfFVu98UTVXm0HR1l0r9o0Vrq36o0Tj429GOakaunWBY1eAw0gg==}
-    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+  bv-pqb@0.0.9:
+    resolution: {integrity: sha512-OLhstCZKh3FQxGYgOLByL8+M5q3dvl7f29i4YDCRZH0YCdAuWLCzF18+4Rt5+RiG4hL/p57kwYluJUUpRlYKiA==}
     peerDependencies:
       typescript: ^5.8.3
 
@@ -3957,41 +3935,9 @@ snapshots:
     dependencies:
       streamsearch: 1.1.0
 
-  bv-pqb@0.0.3(typescript@5.8.3):
+  bv-pqb@0.0.9(typescript@5.8.3):
     dependencies:
       '@types/lodash': 4.17.16
-      bv-prisma-query-builder: 0.0.2(typescript@5.8.3)
-      lodash: 4.17.21
-      query-string: 9.1.2
-      typescript: 5.8.3
-
-  bv-pqb@0.0.4(typescript@5.8.3):
-    dependencies:
-      '@types/lodash': 4.17.16
-      bv-pqb: 0.0.3(typescript@5.8.3)
-      lodash: 4.17.21
-      query-string: 9.1.2
-      typescript: 5.8.3
-
-  bv-pqb@0.0.7(typescript@5.8.3):
-    dependencies:
-      '@types/lodash': 4.17.16
-      bv-pqb: 0.0.4(typescript@5.8.3)
-      lodash: 4.17.21
-      query-string: 9.1.2
-      typescript: 5.8.3
-
-  bv-prisma-query-builder@0.0.1(typescript@5.8.3):
-    dependencies:
-      '@types/lodash': 4.17.16
-      lodash: 4.17.21
-      query-string: 9.1.2
-      typescript: 5.8.3
-
-  bv-prisma-query-builder@0.0.2(typescript@5.8.3):
-    dependencies:
-      '@types/lodash': 4.17.16
-      bv-prisma-query-builder: 0.0.1(typescript@5.8.3)
       lodash: 4.17.21
       query-string: 9.1.2
       typescript: 5.8.3
