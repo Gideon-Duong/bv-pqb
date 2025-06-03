@@ -6,7 +6,8 @@ export const _sort = (query: Object): Array<Sort> | undefined => {
   let sort = _.get(query, 'sort');
   if (!sort) return;
 
-  sort = sort.split(',') || [];
+  sort = sort.match(/(?:[^(,]+(?:\([^)]*\))?)+/g)?.map((f: string) => f.trim()) ??
+    [];
   return sort.map((field: string) => {
     const prefix = field.startsWith('-');
     const fieldHasRemovedPrefix = prefix ? field.slice(1) : field;

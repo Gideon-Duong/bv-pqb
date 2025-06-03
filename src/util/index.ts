@@ -6,6 +6,7 @@ import { _where } from "./_where";
 import { _select } from "./_select";
 import { _include } from "./_include";
 import { _cursor } from "./_cursor";
+import { _omit } from "./_omit";
 import type { Object } from "../types";
 
 export const QueryBuilder = (query: Object) => {
@@ -16,6 +17,7 @@ export const QueryBuilder = (query: Object) => {
   const select = _select(query);
   const include = _include(query);
   const cursor = _cursor(query);
+  const omit = _omit(query);
   return {
     ...(cursor && { cursor }),
     take,
@@ -24,5 +26,6 @@ export const QueryBuilder = (query: Object) => {
     ...(where && !_.isEmpty(where) && { where }),
     ...(select && { select }),
     ...(include && { include }),
+    ...(omit && { omit }),
   };
 };

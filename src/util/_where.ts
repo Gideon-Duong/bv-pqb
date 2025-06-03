@@ -18,7 +18,7 @@ const _parseValue = (value: string): boolean | number | string | string[] => {
 
 
 export const _where = (query: Object): Object => {
-  const where = _.omit(query, ["page", "take", "sort", "select", "include", "cursor"]);
+  const where = _.omit(query, ["page", "take", "sort", "select", "include", "cursor", "omit"]);
 
   let r = {};
   for (const [k, v] of Object.entries(where)) {
