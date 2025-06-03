@@ -27,8 +27,8 @@ importers:
         specifier: ^1.2.2
         version: 1.2.2(@types/react@19.1.4)(react@19.1.0)
       bv-pqb:
-        specifier: ^0.1.0
-        version: 0.1.0(typescript@5.8.3)
+        specifier: ^0.1.2
+        version: 0.1.2(typescript@5.8.3)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -1290,8 +1290,8 @@ packages:
     resolution: {integrity: sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==}
     engines: {node: '>=10.16.0'}
 
-  bv-pqb@0.1.0:
-    resolution: {integrity: sha512-KM7uemfH3x69wqIT6UDH2LGf8tc3HrgQnmQ6idgV23DmYXo6yEKYp0jxKbWMKb52Sd+/3BTOHRhzJsU9VrCfPw==}
+  bv-pqb@0.1.2:
+    resolution: {integrity: sha512-GqBdJgw7cfDOJzoScTX9wyb8ThHcHdOEVkslLku3U0ujzHM0ySPA0QnYSXuzAnVbaPQPTaBvbqCp3Ns9YHaKbA==}
     peerDependencies:
       typescript: ^5.8.3
 
@@ -3935,7 +3935,7 @@ snapshots:
     dependencies:
       streamsearch: 1.1.0
 
-  bv-pqb@0.1.0(typescript@5.8.3):
+  bv-pqb@0.1.2(typescript@5.8.3):
     dependencies:
       '@types/lodash': 4.17.16
       lodash: 4.17.21

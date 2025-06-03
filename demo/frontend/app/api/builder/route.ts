@@ -22,6 +22,9 @@ export async function POST(request: Request) {
     ...(builder?.cursor && {
       cursor: builder.cursor,
     }),
+    ...(builder?.omit && {
+      omit: builder.omit,
+    }),
     ...(builder?.skip && {
       skip: builder.skip,
     }),
