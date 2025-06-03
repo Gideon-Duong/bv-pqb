@@ -1,9 +1,5 @@
 import _ from "lodash";
-import { _nestedDotNotation } from "../common";
-
-type JSONValue = string | number | boolean | null | JSONObject | JSONArray;
-type JSONObject = { [key: string]: JSONValue };
-type JSONArray = JSONValue[];
+import { _nestedDotNotation, _transformOrAndToUppercase } from "../common";
 
 const _parseValue = (value: string): boolean | number | string | string[] => {
   if (value === "true") return true;
@@ -20,27 +16,9 @@ const _parseValue = (value: string): boolean | number | string | string[] => {
   return value;
 };
 
-const _transformOrAndToUppercase = <T extends JSONValue>(input: T): T => {
-  if (_.isArray(input)) {
-    return input.map(_transformOrAndToUppercase) as T;
-  }
-
-  if (_.isPlainObject(input)) {
-    const result: JSONObject = {};
-    for (const [key, value] of Object.entries(input as JSONObject)) {
-      const newKey = ["and", "or"].includes(key.toLowerCase())
-        ? key.toUpperCase()
-        : key;
-      result[newKey] = _transformOrAndToUppercase(value);
-    }
-    return result as T;
-  }
-
-  return input;
-};
 
 export const _where = (query: Object): Object => {
-  const where = _.omit(query, ["page", "take", "sort", "select", "include"]);
+  const where = _.omit(query, ["page", "take", "sort", "select", "include", "cursor"]);
 
   let r = {};
   for (const [k, v] of Object.entries(where)) {

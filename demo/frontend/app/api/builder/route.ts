@@ -19,7 +19,12 @@ export async function POST(request: Request) {
     ...(builder?.include && {
       include: builder.include,
     }),
-    skip: builder.skip,
+    ...(builder?.cursor && {
+      cursor: builder.cursor,
+    }),
+    ...(builder?.skip && {
+      skip: builder.skip,
+    }),
     take: builder.take,
   });
   return Response.json({
