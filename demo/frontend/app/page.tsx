@@ -2,7 +2,7 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
 import dynamic from 'next/dynamic';
-import qs from 'qs';
+import queryString from 'query-string';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -70,7 +70,7 @@ export default function Home() {
   const onSubmit = async (values: z.infer<typeof schema>) => {
     try {
       setIsLoading(true);
-      const parse = qs.parse(values.query, { allowDots: true });
+      const parsed = queryString.parse(values.query);
       const res = await fetch('/api/builder', {
         method: 'POST',
         headers: {
@@ -78,7 +78,7 @@ export default function Home() {
         },
         body: JSON.stringify({
           collection: values.collection,
-          query: parse,
+          query: parsed,
         }),
       });
       const data = await res.json();
