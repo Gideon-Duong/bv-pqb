@@ -70,7 +70,7 @@ export default function Home() {
   const onSubmit = async (values: z.infer<typeof schema>) => {
     try {
       setIsLoading(true);
-      const parse = qs.parse(values.query);
+      const parse = qs.parse(values.query, { allowDots: true });
       const res = await fetch('/api/builder', {
         method: 'POST',
         headers: {
